@@ -2,7 +2,7 @@
 
 **Coordinador**: Marlon Brenes
 
-***Estudiantes***: 
+####Estudiantes####: 
  - Daniel Lacayo Zúñiga
  - Jorge Salas Rodríguez
  - Jorge Ramsés Jiménez Ramírez
