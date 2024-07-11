@@ -18,9 +18,8 @@ extra_javascript:
 
 plugins:
   - mkdocstrings
-
 nav:
   - Main: index.md
   - Planteamiento: planteamiento.md
-  - Reference: reference.md
-  
+  - Python Code: reference.md
+  - Python Parallel: parallel.md
