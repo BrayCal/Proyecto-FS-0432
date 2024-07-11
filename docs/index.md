@@ -2,6 +2,13 @@
 
 **Coordinador**: Marlon Brenes
 
+***Estudiantes***: 
+  Daniel Lacayo Zúñiga
+  Jorge Salas Rodríguez
+  Jorge Ramsés Jiménez Ramírez
+  Bryton Ramírez Calderón
+  Josué David Gómez Castillo
+
 La dinámica de un estado puro para un sistema cuántico aislado se rige bajo la ecuación Schrödinger (\( \hbar = 1 \)):
 
 $$
@@ -25,3 +32,10 @@ Es decir, la solución involucra resolver de manera numérica la ecuación difer
 - Implementar la solución en **C++**
 - Encontrar una forma de paralelizar el algoritmo y evaluar la aceleración
 
+
+####- Con base en argumentos numéricos, evaluar cuál de las dos metodologías es mejor implementar para la solución numérica
+####- Construir la matriz Hamiltoniana mediante productos tensoriales
+####- Resolver el sistema utilizando algún estado inicial y visualizar su dinámica
+####- Implementar la solución en **Python**
+####- Implementar la solución en **C++**
+####- Encontrar una forma de paralelizar el algoritmo y evaluar la aceleración
