@@ -13,7 +13,7 @@ def operacion(orden):
         orden (list of ndarray): Lista de matrices para calcular el producto de Kronecker.
 
     Returns:
-        ndarray: Producto de Kronecker de las matrices en `orden`.
+        producto (ndarray): Producto de Kronecker de las matrices en `orden`.
 
 
     Examples:
@@ -37,7 +37,7 @@ def hamiltonian(J, g, N):
         N (int): Número de sitios en la cadena de espines.
 
     Returns:
-        ndarray: Matriz del Hamiltoniano.
+        H (ndarray): Matriz del Hamiltoniano.
     """
     spins = np.zeros((2**N, 2**N))
     field = np.zeros((2**N, 2**N))
@@ -71,7 +71,7 @@ def schrodinger_derivative(H, psi):
         psi (ndarray): Vector de estado.
 
     Returns:
-        ndarray: Derivada temporal de psi.
+        (ndarray): Derivada temporal de psi.
     """
     return -1j * H.dot(psi)
 
@@ -85,7 +85,8 @@ def rk4_step(H, psi, t, dt):
         dt (float): Paso de tiempo.
 
     Returns:
-        ndarray: Estado de psi después de un paso de RK4.
+        (ndarray): Estado de psi después de un paso de RK4.
+    
     """
     k1 = dt * schrodinger_derivative(H, psi)
     k2 = dt * schrodinger_derivative(H, psi + 0.5 * k1)
@@ -101,7 +102,8 @@ def expectation_value(state, observable):
         observable (ndarray): Matriz del observable.
 
     Returns:
-        float: Valor de expectación del observable.
+        (float): Valor de expectación del observable.
+    
     """
     return np.dot(state.transpose().conjugate(), np.dot(observable, state)).real
 
@@ -113,7 +115,7 @@ def operador_z_n_espin(i, N):
         N (int): Número total de espines.
 
     Returns:
-        ndarray: Operador sigma_z para el i-ésimo espín.
+        (ndarray): Operador sigma_z para el i-ésimo espín.
     """
     operadores = [iden] * N # Crear una lista de N matrices identidad
     operadores[i] = sz # Reemplazar la i-ésima matriz identidad con sigma_z

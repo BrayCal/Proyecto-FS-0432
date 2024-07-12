@@ -16,7 +16,7 @@ def operacion(orden):
         orden (list): Lista de matrices (operadores).
 
     Returns:
-        numpy.ndarray: Producto tensorial de los operadores en la lista.
+        (ndarray): Producto tensorial de los operadores en la lista.
     """
     producto = orden[0]
     for i in orden[1:]:
@@ -32,7 +32,7 @@ def hamiltonian(J, g, N):
         N (int): Número de espines.
 
     Returns:
-        numpy.ndarray: Hamiltoniano del sistema.
+        H (ndarray): Hamiltoniano del sistema.
     """
     spins = np.zeros((2**N, 2**N), dtype=complex)
     field = np.zeros((2**N, 2**N), dtype=complex)
@@ -55,13 +55,13 @@ def evolucion_cuántica(psi_0_transformed, t, eigenvalues, eigenvectors):
     """Evoluciona el estado cuántico en el tiempo usando la diagonalización del Hamiltoniano.
 
     Args:
-        psi_0_transformed (numpy.ndarray): Estado inicial transformado.
+        psi_0_transformed (ndarray): Estado inicial transformado.
         t (float): Tiempo de evolución.
-        eigenvalues (numpy.ndarray): Valores propios del Hamiltoniano.
-        eigenvectors (numpy.ndarray): Vectores propios del Hamiltoniano.
+        eigenvalues (ndarray): Valores propios del Hamiltoniano.
+        eigenvectors (ndarray): Vectores propios del Hamiltoniano.
 
     Returns:
-        numpy.ndarray: Estado cuántico evolucionado.
+        (ndarray): Estado cuántico evolucionado.
     """
     return eigenvectors @ (np.exp(-1j * eigenvalues * t) * psi_0_transformed)
 
@@ -69,11 +69,11 @@ def schrodinger_derivative(H, psi):
     """Calcula la derivada del estado cuántico según la ecuación de Schrödinger.
 
     Args:
-        H (numpy.ndarray): Hamiltoniano del sistema.
-        psi (numpy.ndarray): Estado cuántico.
+        H (ndarray): Hamiltoniano del sistema.
+        psi (ndarray): Estado cuántico.
 
     Returns:
-        numpy.ndarray: Derivada del estado cuántico.
+        (ndarray): Derivada del estado cuántico.
     """
     return -1j * H @ psi
 
@@ -81,13 +81,13 @@ def rk4_step(H, psi, t, dt):
     """Realiza un paso del método de Runge-Kutta de cuarto orden (RK4).
 
     Args:
-        H (numpy.ndarray): Hamiltoniano del sistema.
-        psi (numpy.ndarray): Estado cuántico.
+        H (ndarray): Hamiltoniano del sistema.
+        psi (ndarray): Estado cuántico.
         t (float): Tiempo inicial.
         dt (float): Paso de tiempo.
 
     Returns:
-        numpy.ndarray: Estado cuántico actualizado.
+        (ndarray): Estado cuántico actualizado.
     """
     k1 = dt * schrodinger_derivative(H, psi)
     k2 = dt * schrodinger_derivative(H, psi + 0.5 * k1)
@@ -99,11 +99,11 @@ def expectation_value(state, observable):
     """Calcula el valor de expectación de un observable en un estado cuántico dado.
 
     Args:
-        state (numpy.ndarray): Estado cuántico.
-        observable (numpy.ndarray): Observable cuántico.
+        state (ndarray): Estado cuántico.
+        observable (ndarray): Observable cuántico.
 
     Returns:
-        float: Valor de expectación.
+        (float): Valor de expectación.
     """
     return np.vdot(state, observable @ state).real
 
@@ -115,7 +115,7 @@ def operador_z_n_espin(i, N):
         N (int): Número de espines.
 
     Returns:
-        numpy.ndarray: Operador Z para el i-ésimo espín.
+        ndarray: Operador Z para el i-ésimo espín.
     """
     operadores = [iden] * N
     operadores[i] = sz
