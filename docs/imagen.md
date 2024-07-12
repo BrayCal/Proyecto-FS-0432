@@ -19,4 +19,4 @@ Con RK4:
 ![](img/11nrk4.png)
 
 Con Diag:
-![](img/11ndiag.png)
+![Con diag:](img/11ndiag.png)
