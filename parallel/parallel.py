@@ -17,6 +17,13 @@ def operacion(orden):
 
     Returns:
         (ndarray): Producto tensorial de los operadores en la lista.
+    
+    Examples:
+        >>> operacion([sx, sz])
+        array([[ 0,  0,  1,  0],
+               [ 0,  0,  0, -1],
+               [ 1,  0,  0,  0],
+               [ 0, -1,  0,  0]])
     """
     producto = orden[0]
     for i in orden[1:]:
