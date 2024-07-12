@@ -13,10 +13,12 @@ Con RK4:
 Con Diag
 ![](img/10ndiag.png)
 
-Ahora lo vemos con N = 11.
+###Ahora lo vemos con N = 11.
 
 Con RK4:
+
 ![](img/11nrk4.png)
 
 Con Diag:
-![Con diag:](img/11ndiag.png)
+
+![](img/11ndiag.png)
