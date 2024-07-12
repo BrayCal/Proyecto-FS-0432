@@ -14,6 +14,14 @@ def operacion(orden):
 
     Returns:
         ndarray: Producto de Kronecker de las matrices en `orden`.
+
+
+    Examples:
+        >>> operacion([sx, sz])
+        array([[ 0,  0,  1,  0],
+               [ 0,  0,  0, -1],
+               [ 1,  0,  0,  0],
+               [ 0, -1,  0,  0]])
     """
     producto = orden[0]
     for i in orden[1:]:

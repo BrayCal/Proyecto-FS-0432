@@ -11,17 +11,15 @@ Para las primeras dos gráficas, compararemos los resultados con N = 10. Veremos
 Grafica con el metodo RK4 (N=10), tiempo obtenido 62.48s 
 ![](img/10nrk4.png)
 
-Grafica para el metodos de Diagonalizacion (N=10), tiempo obtenido: 31.794s
+Grafica para el metodos de diagonalización (N=10), tiempo obtenido: 31.794s
 ![](img/10ndiag.png)
-Tiempo obtenido 31.794s
-
 
 ###Ahora veamos el para N = 11.
 
 Grafica con el metodo RK4, tiempo obtenido: 337.792s 
 ![](img/11nrk4.png)
 
-Grafica con el metodo de diagonalizacion, tiempo obtenido: 137.4689s
+Grafica con el metodo de diagonalización, tiempo obtenido: 137.4689s
 
 ![](img/11ndiag.png)
 
