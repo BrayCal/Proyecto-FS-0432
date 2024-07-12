@@ -1,6 +1,6 @@
-# Gráfica obtenida:
+# Gráfica obtenida apartir de Python:
 
-Evolución temporal del valor de expectación usando RK4 para diferentes espines:
+La gráfica obtenida representa cómo cambia en el tiempo el valor esperado del operador σz para cada uno de los cuatro espines en una cadena, usando el modelo de Ising con un campo transversal. Se empleó el método de Runge-Kutta de cuarto orden (RK4) para calcular la evolución temporal del sistema.
 
 ![](img/C1ramses.png)
 
