@@ -4,14 +4,14 @@ La dinámica de un estado puro para un sistema cuántico aislado se rige bajo la
 
 \begin{equation}
     \frac{\partial \ket{\psi(t)}}{\partial t} = -i \hat{H} \ket{\psi(t)},
-
+\label{Ecuación 1}
 \end{equation}
 
 cuya solución formal está dada por
 
 \begin{equation}
     \ket{\psi(t)} = e^{-i\hat{H}(t-t_o)} \ket{\psi(t=t_o)}.
-
+\label{Ecuación }
 \end{equation}
 
 Es decir, la solución involucra resolver de manera numérica la ecuación diferencial o evaluar de alguna forma la exponencial de la matriz. La idea del proyecto es evaluar la dinámica del modelo de Ising empezando de algún estado inicial.

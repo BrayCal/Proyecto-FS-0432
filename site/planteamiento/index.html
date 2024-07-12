@@ -314,16 +314,14 @@
 
 <h1 id="planteamiento-del-problema">Planteamiento del problema</h1>
 <p>La dinámica de un estado puro para un sistema cuántico aislado se rige bajo la ecuación Schrödinger (<span class="arithmatex">\(\hbar = 1\)</span>)</p>
-<div class="arithmatex">\[\begin{equation}
-    \frac{\partial \ket{\psi(t)}}{\partial t} = -i \hat{H} \ket{\psi(t)},
-\label{Ecuación 1}
-\end{equation}\]</div>
+<p>\begin{equation}
+    \frac{\partial \ket{\psi(t)}}{\partial t} = -i \hat{H} \ket{\psi(t)},</p>
+<p>\end{equation}</p>
 <p>cuya solución formal está dada por</p>
-<div class="arithmatex">\[\begin{equation}
-    \ket{\psi(t)} = e^{-i\hat{H}(t-t_o)} \ket{\psi(t=t_o)}.
-\label{Ecuación 2}
-\end{equation}\]</div>
-<p>Es decir, la solución involucra resolver de manera numérica la ecuación diferencial \ref{Ecuación 1} o evaluar de alguna forma la exponencial de la matriz \ref{Ecuación 2}. La idea del proyecto es evaluar la dinámica del modelo de Ising \ref{Hamiltoniano} empezando de algún estado inicial.</p>
+<p>\begin{equation}
+    \ket{\psi(t)} = e^{-i\hat{H}(t-t_o)} \ket{\psi(t=t_o)}.</p>
+<p>\end{equation}</p>
+<p>Es decir, la solución involucra resolver de manera numérica la ecuación diferencial o evaluar de alguna forma la exponencial de la matriz. La idea del proyecto es evaluar la dinámica del modelo de Ising empezando de algún estado inicial.</p>
 <div class="arithmatex">\[\begin{equation}
     \hat{H} = -J \sum_{i=1}^N \hat{\sigma}_i ^z \hat{\sigma}_{i+1} ^z -g \sum_{i=1}^N \hat{\sigma}_i ^x,
 \label{Hamiltoniano}
@@ -331,7 +329,7 @@
 <p>donde <span class="arithmatex">\(J\)</span> es una escala energética que determina la interacción ferromagnética, <span class="arithmatex">\(g\)</span> el parámetro energético del campo transversal y <span class="arithmatex">\(\hat{\sigma}_i ^\alpha\)</span> (<span class="arithmatex">\(\alpha =x, y, z\)</span>) son las matrices de Pauli para el espín <span class="arithmatex">\(i\)</span>.  </p>
 <h1 id="solucion-desarrollada-en-python">Solución desarrollada en Python</h1>
 <p>La solución implementada involucra el uso de las bibliotecas <code>numpy</code>, que permite, entre otras cosas, trabajar con arreglos de matrices, <code>matplotlib.pyplot</code> para poder graficar los resultados y <code>time</code> para medir tiempos de ejecución.  </p>
-<p>Primeramente, la solución requiere de la construcción de la matriz Hamiltoniana a partir de la ecuación \ref{Hamiltoniano}, que es precisamente lo que hace el método <code>hamiltonian</code> presentado en esta documentación. Además de este, como se puede comprobar, se desarrollan otros métodos que ejecutan pasos necesarios para llegar a los resultados deseados. Un método para evolucionar en el tiempo el estado cuántico inicial, otro para calcular la derivada temporal de la ecuación de Schrödinger \ref{Ecuación 1}, métodos que utilizan Runge-Kutta de cuarto orden, entre otros.  </p>
+<p>Primeramente, la solución requiere de la construcción de la matriz Hamiltoniana a partir de la ecuación, que es precisamente lo que hace el método <code>hamiltonian</code> presentado en esta documentación. Además de este, como se puede comprobar, se desarrollan otros métodos que ejecutan pasos necesarios para llegar a los resultados deseados. Un método para evolucionar en el tiempo el estado cuántico inicial, otro para calcular la derivada temporal de la ecuación de Schrödinger, métodos que utilizan Runge-Kutta de cuarto orden, entre otros.  </p>
 <p>Con todos los métodos ya definidos, se procede a su aplicación, declarando antes las matrices de Pauli y los parámetros constantes a usar. Se implementan los métodos de RK4 y de diagonalización evaluando los tiempos de ejecución respectivos; a su vez, se grafican los resultados obtenidos.  </p>
 
 
