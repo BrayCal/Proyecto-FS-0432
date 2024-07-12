@@ -23,6 +23,6 @@ Grafica con el metodo de diagonalización, tiempo obtenido: 137.4689s
 
 ![](img/11ndiag.png)
 
-## Conclucion:
+## Conclusión:
 
-Podemos observar como el tiempo de evolucion en el caso del metodo RK4 siempre es mayor al obtenido por medio de diagonalizacion. 
+Con base en los resultados, se determino que para N pequeños el método de diagonalización tiende a ser mejor que RK4, sin embargo, conforme crece el valor de N asignado RK4 se acerca en cuanto al tiempo a la diagonalización. A partir de esto se concluye que computacionalmente la diagonalización es  “mejor” método para resolver el problema.
