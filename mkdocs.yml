@@ -22,4 +22,5 @@ nav:
   - Main: index.md
   - Planteamiento: planteamiento.md
   - Python Code: reference.md
+  - Resultado: imagen.md
   - Python Parallel: parallel.md
