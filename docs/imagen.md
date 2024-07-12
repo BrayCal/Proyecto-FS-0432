@@ -6,7 +6,7 @@ La gráfica obtenida representa cómo cambia en el tiempo el valor esperado del 
 
 # Gráfica obtenida a partir de Python Diagonalization:
 En las siguientes gráficas, observaremos las diferencias entre el método RK4 y el método de diagonalización. Utilizaremos una grilla de 1001 puntos y el valor de N será inicialmente 10 y luego la aumentamos a 11.
-Para las primeras dos gráficas, compararemos los resultados con N = 10. Veremos las gráficas obtenidas con ambos métodos: RK4 y diagonalización, y analizaremos los tiempos de evolución correspondientes.
+Veremos las gráficas obtenidas con ambos métodos: RK4 y diagonalización, y analizaremos los tiempos de evolución correspondientes.
 
 Grafica con el metodo RK4 (N=10), tiempo obtenido 62.48s 
 ![](img/10nrk4.png)
