@@ -314,13 +314,15 @@
 
 <h1 id="planteamiento-del-problema">Planteamiento del problema</h1>
 <p>La dinámica de un estado puro para un sistema cuántico aislado se rige bajo la ecuación Schrödinger (<span class="arithmatex">\(\hbar = 1\)</span>)</p>
-<p>\begin{equation}
-    \frac{\partial \ket{\psi(t)}}{\partial t} = -i \hat{H} \ket{\psi(t)},</p>
-<p>\end{equation}</p>
+<div class="arithmatex">\[\begin{equation}
+    \frac{\partial \ket{\psi(t)}}{\partial t} = -i \hat{H} \ket{\psi(t)},
+\label{Ecuación 1}
+\end{equation}\]</div>
 <p>cuya solución formal está dada por</p>
-<p>\begin{equation}
-    \ket{\psi(t)} = e^{-i\hat{H}(t-t_o)} \ket{\psi(t=t_o)}.</p>
-<p>\end{equation}</p>
+<div class="arithmatex">\[\begin{equation}
+    \ket{\psi(t)} = e^{-i\hat{H}(t-t_o)} \ket{\psi(t=t_o)}.
+\label{Ecuación }
+\end{equation}\]</div>
 <p>Es decir, la solución involucra resolver de manera numérica la ecuación diferencial o evaluar de alguna forma la exponencial de la matriz. La idea del proyecto es evaluar la dinámica del modelo de Ising empezando de algún estado inicial.</p>
 <div class="arithmatex">\[\begin{equation}
     \hat{H} = -J \sum_{i=1}^N \hat{\sigma}_i ^z \hat{\sigma}_{i+1} ^z -g \sum_{i=1}^N \hat{\sigma}_i ^x,
